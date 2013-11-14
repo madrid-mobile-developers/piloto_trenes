@@ -63,7 +63,7 @@ module.exports = function (grunt) {
                 command: 'supervisor server.js'
             },
             git_push:{
-                command: 'git push -u origin master'
+                command: 'git push -u github master'
             }
         },
         karma: {
