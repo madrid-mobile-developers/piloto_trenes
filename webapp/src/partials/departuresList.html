@@ -1,0 +1,21 @@
+<div class="ui-li-heading">
+    <h3>Estación: <%=Departures.location.name%></h3>
+</div>
+<div>
+    <ul class="ui-listview">
+    <% for(var i=0; i<Departures.departures.length; i++){%>
+        <li class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-corner-top ui-li-has-icon ui-btn-up-c">
+            <div class="ui-btn-inner ui-li ui-corner-top">
+                <div class="ui-btn-text">
+                    <a href="#station/<%=Departures.location.name%>/train/<%=i%>" class="ui-link-inherit">
+                        <img src="img/glyphicons_014_train.png" class="ui-li-icon ui-li-thumb">
+                        <%=Departures.departures[i]['direction']%>
+                    </a>
+                </div>
+                <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+            </div>
+        </li>
+    <%  }   %>
+    </ul>
+</div>
+
