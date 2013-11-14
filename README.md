@@ -43,4 +43,6 @@ This is a tiny project to show how to configure a Cordova project using Backbone
 
     # Build to distribute client app (dist folder): JSLint + karma (unit tests) + requirejs (optimize one file)
     cd piloto_trenes/webapp
+
+    # Under-construction: the response of github is not processed, so if something in pull goes wrong you won't be warned.
     grunt prod_deploy
