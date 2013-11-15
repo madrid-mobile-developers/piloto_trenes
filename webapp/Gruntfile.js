@@ -64,6 +64,9 @@ module.exports = function (grunt) {
             },
             git_push:{
                 command: 'git push -u github master'
+            },
+            clean_apache:{
+                command: 'rm -R /Library/WebServer/Documents/train/*'
             }
         },
         karma: {
@@ -87,5 +90,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', ['bower', 'copy:main', 'clean:sources', 'copy:sources']);
     grunt.registerTask('dev_deploy', ['karma:unit', 'clean:sources', 'copy:sources']);
-    grunt.registerTask('prod_deploy', ['karma:unit', 'shell:git_push']);
+    grunt.registerTask('prod_install', ['karma:unit', 'shell:git_push']);
+    grunt.registerTask('prod_deploy', ['karma:unit', 'shell:clean_apache', 'copy:apache']);
 };
