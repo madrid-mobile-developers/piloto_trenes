@@ -5,21 +5,38 @@ module.exports = function (grunt) {
         bower: {
             install: {
                 options: {
-                    targetDir: './lib',
+                    targetDir: './temp_lib',
                     install: true,
                     verbose: false,
-                    cleanTargetDir: false,
+                    cleanTargetDir: true,
                     cleanBowerDir: true
                 }
             }
         },
         copy: {
-            main: {
+            lib: {
                 expand: true,
                 cwd: 'lib/',
                 src: '**',
                 dest: 'public/lib/',
                 filter: 'isFile'
+            },
+            bower: {
+                files :
+                    [
+                    // jquery
+                    {expand: true, cwd: 'temp_lib/', src: 'jquery/jquery.*', dest: './lib/', filter: 'isFile'},
+                    //backbone
+                    {expand: true, cwd: 'temp_lib/', src: 'backbone-amd/backbone-min.*', dest: './lib/', filter: 'isFile'},
+                    //jquery-mobile
+                    {expand: true, cwd: 'temp_lib/', src: 'jquery-mobile/dist/jquery.mobile.min.*', dest: './lib/', filter: 'isFile'},
+                    //requirejs
+                    {expand: true, cwd: 'temp_lib/', src: 'requirejs/require.js', dest: './lib/', filter: 'isFile'},
+                    //requirejs-text
+                    {expand: true, cwd: 'temp_lib/', src: 'requirejs-text/text.js', dest: './lib/', filter: 'isFile'},
+                    //underscore
+                    {expand: true, cwd: 'temp_lib/', src: 'underscore-amd/underscore-min.*', dest: './lib/', filter: 'isFile'}
+                    ]
             },
             sources: {
                 expand: true,
@@ -53,6 +70,14 @@ module.exports = function (grunt) {
             sources: {
                 src: ['public/app/**'],
                 force: true
+            },
+            lib: {
+                src: ['public/lib/**'],
+                force: true
+            },
+            bower: {
+                src: ['temp_lib'],
+                force: true
             }
         },
         shell: {
@@ -67,6 +92,25 @@ module.exports = function (grunt) {
             },
             clean_apache:{
                 command: 'rm -R /Library/WebServer/Documents/train/*'
+            },
+            build_jquery_mobile: {
+                command: 'grunt js:release',
+                options: {
+                    stdout: true,
+                    execOptions: {
+                        cwd: './temp_lib/jquery-mobile/'
+                    }
+                }
+
+            },
+            npm_jquery_mobile:{
+                command: 'npm install',
+                options: {
+                    stdout: true,
+                    execOptions: {
+                        cwd: './temp_lib/jquery-mobile/'
+                    }
+                }
             }
         },
         karma: {
@@ -88,8 +132,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-karma');
 
-    grunt.registerTask('default', ['bower', 'copy:main', 'clean:sources', 'copy:sources']);
-    grunt.registerTask('dev_deploy', ['karma:unit', 'clean:sources', 'copy:sources']);
+    grunt.registerTask('default', ['bower', 'shell:npm_jquery_mobile','shell:build_jquery_mobile','copy:bower', 'clean:bower', 'dev_deploy']);
+    grunt.registerTask('dev_deploy', ['karma:unit', 'clean:lib', 'copy:lib', 'clean:sources', 'copy:sources']);
     grunt.registerTask('prod_install', ['karma:unit', 'shell:git_push']);
     grunt.registerTask('prod_deploy', ['karma:unit', 'shell:clean_apache', 'copy:apache']);
 };

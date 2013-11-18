@@ -11,10 +11,10 @@ requirejs.config({
 
     paths: {
         'jquery': '../../lib/jquery/jquery',
-        'jquery-mobile': '../../lib/jquery-mobile/js/jquery.mobile-1.3.2',
-        'underscore': '../../lib/underscore-amd/underscore',
+        'jquery-mobile': '../../lib/jquery-mobile/dist/jquery.mobile.min',
+        'underscore': '../../lib/underscore-amd/underscore-min',
         'text': '../../lib/requirejs-text/text',
-        'Backbone' : '../../lib/backbone-amd/backbone'
+        'Backbone' : '../../lib/backbone-amd/backbone-min'
     },
 
     shim: {
