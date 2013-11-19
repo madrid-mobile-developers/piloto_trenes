@@ -132,8 +132,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-karma');
 
-    grunt.registerTask('default', ['bower', 'shell:npm_jquery_mobile','shell:build_jquery_mobile','copy:bower', 'clean:bower']);
-    grunt.registerTask('install', ['default', 'dev_deploy']);
+    grunt.registerTask('default', ['install', 'dev_deploy']);
+    grunt.registerTask('install', ['bower', 'shell:npm_jquery_mobile','shell:build_jquery_mobile','copy:bower', 'clean:bower']);
     grunt.registerTask('dev_deploy', ['karma:unit', 'clean:lib', 'copy:lib', 'clean:sources', 'copy:sources']);
     grunt.registerTask('prod_install', ['karma:unit', 'shell:git_push']);
     grunt.registerTask('prod_deploy', ['karma:unit', 'shell:clean_apache', 'copy:apache']);
