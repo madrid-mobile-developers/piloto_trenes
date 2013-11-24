@@ -4,10 +4,11 @@
 define('views/Departures',
     [
         'Backbone',
+        'utils',
         'models/departuresModel',
         'text!../../partials/departuresList.html'
     ],
-    function (Backbone, departuresModel, tpl) {
+    function (Backbone, utils, departuresModel, tpl) {
         return Backbone.View.extend({
             el: "#viewContainer",
             initialize: function () {
@@ -23,19 +24,13 @@ define('views/Departures',
                 //Variables to keep the context
                 var container = this.$el;
                 var spliceFunction = this.spliceDepartures;
-                //TODO date searching
                 //As we use a Singleton pattern to share the model between Departures list and train detail we
                 //must clear the model everytime Departures is rendered
                 this.model.clear();
                 //setting the parameters
-                this.model.set({
-                    'stationname': stationName,
-                    'year': 2013,
-                    'month': '11',
-                    'day': '14',
-                    'hour': '12',
-                    'minutes': '00'
-                });
+                var param = utils.getActualDate();
+                param['stationname'] = stationName;
+                this.model.set(param);
                 //Reset the srcoll
                 $.mobile.silentScroll(0);
                 //Fetching data
@@ -55,7 +50,7 @@ define('views/Departures',
                         //Resolve the promise
                         deferred.resolve();
                         //Throw the error to the handler
-                        throw new Error(error);
+                        throw new Error(JSON.stringify(error), 'Departures.js');
                     }
                 });
                 return deferred.promise();

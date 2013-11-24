@@ -20,7 +20,7 @@ define([
             spyOn(this.view.model, 'url').andCallThrough();
             this.view.render('Messancy');
             expect(this.view.model.url).toHaveBeenCalled();
-            expect(this.view.model.url()).toBe('https://irail.p.mashape.com/NMBS/Departures/Messancy/2013/11/14/12/00.json');
+            expect(this.view.model.url().indexOf('Messancy')).toBeGreaterThan(0);
         });
 
         it("Render show the list of departures", function() {
