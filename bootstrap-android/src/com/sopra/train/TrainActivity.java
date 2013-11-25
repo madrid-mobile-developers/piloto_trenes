@@ -29,7 +29,7 @@ public class TrainActivity extends DroidGap
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        super.loadUrl("http://192.168.43.76/train/app/index.html");
+        super.loadUrl("http://ec2-54-194-53-42.eu-west-1.compute.amazonaws.com:3000/app/index.html");
     }
 }
 
