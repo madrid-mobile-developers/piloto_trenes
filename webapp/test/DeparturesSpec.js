@@ -38,7 +38,7 @@ define([
             //Wait for the promise resolution
             waitsFor(function() {
                 return flag;
-            }, "The list should be rendered", 5000);
+            }, "The list should be rendered", 10000);
 
             //Execute once the promise has been resolved
             runs(function() {

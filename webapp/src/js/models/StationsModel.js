@@ -3,10 +3,11 @@
  */
 define('models/StationsModel',
     [
-        'Backbone'
+        'Backbone',
+        'utils'
     ],
-    function (Backbone) {
+    function (Backbone, utils) {
         return Backbone.Model.extend({
-            url:'https://irail.p.mashape.com/NMBS/Stations.json'
+            url: utils.getURLService() + 'Stations.json'
         });
     });

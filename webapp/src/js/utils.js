@@ -107,6 +107,10 @@ define('utils',
                 };
                 return errors;
             },
+            /**
+             * Get the date in an dictionary
+             * @returns {{year: number, month: number, day: number, hour: number, minutes: number}}
+             */
             getActualDate : function(){
                 var date = new Date();
                 return {
@@ -116,6 +120,13 @@ define('utils',
                     'hour': date.getHours(),
                     'minutes': date.getMinutes()
                 };
+            },
+            /**
+             * Obtain the url for the services
+             * @returns {string}
+             */
+            getURLService: function(){
+                return 'https://irail.p.mashape.com/NMBS/';
             }
         };
 });
