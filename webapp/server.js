@@ -44,6 +44,6 @@ app.configure('production', function(){
 
 
 
-http.createServer(app).listen(3000, '127.0.0.1', function() {
+http.createServer(app).listen(3000, undefined, function() {
     console.log("Express server listening on %s:%d in %s mode", '127.0.0.1', 3000, app.settings.env);
 });

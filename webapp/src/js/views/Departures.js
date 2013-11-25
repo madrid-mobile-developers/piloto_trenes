@@ -37,9 +37,8 @@ define('views/Departures',
                 this.model.fetch({
                     success: function(model){
                         //In order to improve the POC we are slicing the results array
-                        model.set('')
                         container.html(_.template(tpl, spliceFunction(model)));
-//                        Hide loading
+                        // Hide loading
                         $.mobile.hidePageLoadingMsg();
                         //Resolve the promise
                         deferred.resolve();
