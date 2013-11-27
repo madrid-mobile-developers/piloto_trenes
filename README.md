@@ -9,7 +9,7 @@ This is a tiny project to show how to configure a Cordova project using Backbone
 
 ## Installation
 
-    git clone git@github.com:madrid-mobile-developers/piloto_trenes.git
+    git clone https://bitbucket.org/consultoriaarquitecturaapps/trains.git
 
     cd piloto_trenes/webapp
     npm install
