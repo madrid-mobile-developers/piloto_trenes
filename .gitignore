@@ -1,20 +1,4 @@
-# webapp ignores
-.DS_Store
 
-webapp/lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
-
-webapp/pids
-webapp/logs
-webapp/results
-
-webapp/npm-debug.log
 webapp/node_modules
 
 
@@ -72,3 +56,11 @@ webapp/node_modules
 
 #CocoaPods
 *-ios/Pods
+bootstrap-ios/Train.xcodeproj/project.xcworkspace/xcuserdata
+bootstrap-android/assets/www
+bootstrap-ios/www
+output.log
+webapp/public/app
+webapp/public/lib
+webapp/temp_lib
+webapp/test/coverage
