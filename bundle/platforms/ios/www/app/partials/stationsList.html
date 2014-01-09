@@ -1,0 +1,21 @@
+<p>
+    <div class="ui-li-heading">Estaciones</div>
+</p>
+<div>
+    <ul class="ui-listview">
+        <% for(var i=0; i <data.length; i++){%>
+        <li class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-corner-top ui-li-has-icon ui-btn-up-c">
+            <div class="ui-btn-inner ui-li ui-corner-top">
+                <div class="ui-btn-text">
+                    <a href="#station/<%=data[i]['name']%>" class="ui-link-inherit">
+                        <img src="img/glyphicons_089_building.png" alt="United States" class="ui-li-icon ui-li-thumb">
+                        <%=data[i]['name']%>
+                    </a>
+                </div>
+                <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+            </div>
+        </li>
+        <% } %>
+    </ul>
+</div>
+

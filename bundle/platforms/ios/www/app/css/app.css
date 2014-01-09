@@ -1,0 +1,50 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+[class^="gicon-"],
+[class*=" gicon-"] {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    *margin-right: .3em;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-repeat: no-repeat;
+    margin-top: 1px;
+}
+.gicon-train {
+    background-image: url("../img/glyphicons_014_train.png");
+}
+.gicon-circle-arrow-left {
+    background-image: url("../img/glyphicons_216_circle_arrow_left.png");
+}
+.gicon-building {
+    background-image: url("../img/glyphicons_089_building.png");
+}
