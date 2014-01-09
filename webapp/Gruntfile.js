@@ -22,8 +22,7 @@ module.exports = function (grunt) {
                 filter: 'isFile'
             },
             bower: {
-                files :
-                    [
+                files: [
                     // jquery
                     {expand: true, cwd: 'temp_lib/', src: 'jquery/jquery.*', dest: './lib/', filter: 'isFile'},
                     //backbone
@@ -36,14 +35,22 @@ module.exports = function (grunt) {
                     {expand: true, cwd: 'temp_lib/', src: 'requirejs-text/text.js', dest: './lib/', filter: 'isFile'},
                     //underscore
                     {expand: true, cwd: 'temp_lib/', src: 'underscore-amd/underscore-min.*', dest: './lib/', filter: 'isFile'}
-                    ]
+                ]
             },
             sources: {
-                expand: true,
-                cwd: 'src/',
-                src: '**',
-                dest: 'public/app/',
-                filter: 'isFile'
+                files: [
+                    {expand: true,
+                        cwd: 'src/',
+                        src: '**',
+                        dest: 'public/app/',
+                        filter: 'isFile'},
+                    {expand: true,
+                        src: './config.xml',
+                        dest: './public/',
+                        filter: 'isFile'}
+
+                ]
+
             },
             apache: {
                 files: [
@@ -87,10 +94,10 @@ module.exports = function (grunt) {
                 },
                 command: 'supervisor server.js'
             },
-            git_push:{
+            git_push: {
                 command: 'git push -u github master'
             },
-            clean_apache:{
+            clean_apache: {
                 command: 'rm -R /Library/WebServer/Documents/train/*'
             },
             build_jquery_mobile: {
@@ -103,7 +110,7 @@ module.exports = function (grunt) {
                 }
 
             },
-            npm_jquery_mobile:{
+            npm_jquery_mobile: {
                 command: 'npm install',
                 options: {
                     stdout: true,
@@ -133,7 +140,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-karma');
 
     grunt.registerTask('default', ['install', 'dev_deploy']);
-    grunt.registerTask('install', ['bower', 'shell:npm_jquery_mobile','shell:build_jquery_mobile','copy:bower', 'clean:bower']);
+    grunt.registerTask('install', ['bower', 'shell:npm_jquery_mobile', 'shell:build_jquery_mobile', 'copy:bower', 'clean:bower']);
     grunt.registerTask('dev_deploy', ['karma:unit', 'clean:lib', 'copy:lib', 'clean:sources', 'copy:sources']);
     grunt.registerTask('prod_install', ['karma:unit', 'shell:git_push']);
     grunt.registerTask('prod_deploy', ['karma:unit', 'shell:clean_apache', 'copy:apache']);

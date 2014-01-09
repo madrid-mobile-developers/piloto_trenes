@@ -60,7 +60,6 @@ bootstrap-ios/Train.xcodeproj/project.xcworkspace/xcuserdata
 bootstrap-android/assets/www
 bootstrap-ios/www
 output.log
-webapp/public/app
-webapp/public/lib
 webapp/temp_lib
 webapp/test/coverage
+webapp/public/**
