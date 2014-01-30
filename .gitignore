@@ -63,3 +63,4 @@ output.log
 webapp/temp_lib
 webapp/test/coverage
 webapp/public/**
+local.properties
