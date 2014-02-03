@@ -64,3 +64,6 @@ webapp/temp_lib
 webapp/test/coverage
 webapp/public/**
 local.properties
+bundle/platforms/ios/CordovaLib/CordovaLib.xcodeproj/xcuserdata
+bundle/platforms/ios/PocTrains.xcodeproj/xcuserdata
+bundle/platforms/ios/PocTrains.xcodeproj/project.xcworkspace/xcuserdata
