@@ -69,8 +69,6 @@ define('utils',
                     //TODO: Enviar al servidor la traza de error con la informacion del dispositivo
                     console.log( "---ERROR: "+url+":"+line+" Message: "+message);
                     console.log('INFO===========>' + JSON.stringify(this.getInfoDevice()));
-
-                    this.hideLoading();
                     return true;
                 },this);
 
