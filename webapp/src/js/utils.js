@@ -3,9 +3,10 @@
  */
 define('utils',
     [
-        'jquery'
+        'jquery',
+        'Backbone'
     ],
-    function($){
+    function($, Backbone){
         return {
             historyBack : function(){
                 window.history.back();
@@ -54,19 +55,36 @@ define('utils',
             initErrorHandler: function(){
                 //Setup our own error handler in the Ajax requests
                 this.initAjaxErrorSetup();
+
+                var notNetwork = false;
                 //Setup the default Javascript error handler
                 window.onerror = _.bind(function(message, url, line){
-                    //TODO: Sustituir alerts por componentes modales.
                     if(message === 'Error: ' + this.getErrorCode().NOTNETWORK){
+                        notNetwork = true;
                         alert('Error de conectividad con la red de datos.');
                     } else if(message === 'Error: ' + this.getErrorCode().INTERNAL){
                         alert('No se han podido recuperar los datos. Inténtelo más tarde');
-                    }
-                    else
-                    {
+                    } else {
                         alert('No se han podido recuperar los datos.Disculpe las molestias e inténtelo más tarde');
                     }
-                    //TODO: Enviar al servidor la traza de error con la informacion del dispositivo
+                    //We can't send the trace to backend if the error is not network
+                    if(!notNetwork){
+                        //Send the error trace to backend
+                        if(typeof this.traceModel === 'undefined'){
+                            var Model = Backbone.Model.extend({
+                                url : '/trace'
+                            });
+                            this.traceModel = new Model();
+                        }else{
+                            this.traceModel.reset();
+                        }
+                        this.traceModel.save({
+                            url : url,
+                            line: line,
+                            message: message,
+                            device: this.getInfoDevice()
+                        });
+                    }
                     console.log( "---ERROR: "+url+":"+line+" Message: "+message);
                     console.log('INFO===========>' + JSON.stringify(this.getInfoDevice()));
                     return true;
@@ -106,10 +124,30 @@ define('utils',
                 return errors;
             },
             /**
+             * Devuelve un objeto info con informacion relativa al dispositivo
+             * id - Identificador del dispositivo
+             * name - Nombre del dispositivo.
+             * platform - Sistema operativo del dispositivo.
+             * version - version del sistema operativo.
+             *
+             * @return info objeto con la informacion relativa al dispositivo
+             *
+             */
+            getInfoDevice: function(){
+                var info = {};
+                if(window.device){
+                    info.id = window.device.uuid;
+                    info.version = window.device.version;
+                    info.name = window.device.name;
+                    info.platform = window.device.platform;
+                }
+                return info;
+            },
+            /**
              * Get the date in an dictionary
              * @returns {{year: number, month: number, day: number, hour: number, minutes: number}}
              */
-            getActualDate : function(){
+            getMoment : function(){
                 var date = new Date();
                 return {
                     'year': date.getFullYear(),

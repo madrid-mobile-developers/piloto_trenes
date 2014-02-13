@@ -1,6 +1,7 @@
 var path = require('path'),
     express = require('express'),
-    http = require('http');
+    http = require('http'),
+    routes = require('./routes');
 
 var app = express();
 
@@ -21,8 +22,7 @@ app.configure(function(){
       // intercept OPTIONS method
       if ('OPTIONS' == req.method) {
         res.send(200);
-      }
-      else {
+      } else {
         next();
       }
     };
@@ -42,7 +42,7 @@ app.configure('production', function(){
     app.use(express.errorHandler());
 });
 
-
+routes(app);
 
 http.createServer(app).listen(3000, undefined, function() {
     console.log("Express server listening on %s:%d in %s mode", '127.0.0.1', 3000, app.settings.env);

@@ -73,7 +73,18 @@ module.exports = function (config) {
         // - Safari (only Mac)
         // - PhantomJS
         // - IE (only Windows)
-        browsers: ['PhantomJS'],
+        browsers: ['PhantomJS_custom'],
+
+
+
+        // you can define custom flags
+        customLaunchers: {
+            'PhantomJS_custom': {
+                base: 'PhantomJS',
+                flags: ['--web-security=false']
+            }
+        },
+
 
 
         // If browser does not capture in given timeout [ms], kill it
