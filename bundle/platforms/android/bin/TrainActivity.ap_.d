@@ -17,7 +17,7 @@
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/cordova.js \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/cordova_plugins.js \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib \
-/Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/app/config.xml \
+/Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/plugins \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/app/css \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/app/img \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/app/index.html \
@@ -153,6 +153,7 @@
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/app/partials/stationsList.html \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/app/partials/trainDetail.html \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib/backbone-amd \
+/Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib/cordova \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib/jquery \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib/jquery-mobile \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib/requirejs \
@@ -160,6 +161,8 @@
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib/underscore-amd \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib/backbone-amd/backbone-min.js \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib/backbone-amd/backbone-min.map \
+/Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib/cordova/cordova.js \
+/Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib/cordova/cordova_plugins.js \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib/jquery/jquery.js \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib/jquery-mobile/dist \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib/jquery-mobile/dist/jquery.mobile.min.js \
@@ -168,4 +171,10 @@
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib/requirejs-text/text.js \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib/underscore-amd/underscore-min.js \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/lib/underscore-amd/underscore-min.map \
+/Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/plugins/org.apache.cordova.geolocation \
+/Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/plugins/org.apache.cordova.geolocation/www \
+/Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/plugins/org.apache.cordova.geolocation/www/Coordinates.js \
+/Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/plugins/org.apache.cordova.geolocation/www/geolocation.js \
+/Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/plugins/org.apache.cordova.geolocation/www/Position.js \
+/Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/assets/www/plugins/org.apache.cordova.geolocation/www/PositionError.js \
 /Users/jarias/Desarrollos/Workspaces/WS_Sanitas/piloto_trenes/bundle/platforms/android/bin/AndroidManifest.xml \

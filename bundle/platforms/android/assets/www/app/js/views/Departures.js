@@ -28,7 +28,7 @@ define('views/Departures',
                 //must clear the model everytime Departures is rendered
                 this.model.clear();
                 //setting the parameters
-                var param = utils.getActualDate();
+                var param = utils.getMoment();
                 param['stationname'] = stationName;
                 this.model.set(param);
                 //Reset the srcoll

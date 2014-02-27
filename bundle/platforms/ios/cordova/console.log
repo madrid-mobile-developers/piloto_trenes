@@ -7,3 +7,38 @@
 2014-01-09 11:24:28.820 PocTrains[51459:a0b] Unlimited access to network resources
 2014-01-09 11:24:29.024 PocTrains[51459:a0b] Resetting plugins due to page load.
 2014-01-09 11:24:30.429 PocTrains[51459:a0b] Finished load of: file:///Users/jarias/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/84801EC2-D45F-41ED-97CA-E1F63EF8B60E/PocTrains.app/www/app/index.html
+2014-02-17 17:01:35.039 PocTrains[16721:a0b] Multi-tasking -> Device: YES, App: YES
+2014-02-17 17:01:35.123 PocTrains[16721:a0b] Unlimited access to network resources
+2014-02-17 17:01:35.265 PocTrains[16721:a0b] Resetting plugins due to page load.
+2014-02-17 17:01:35.325 PocTrains[16721:a0b] Finished load of: file:///Users/jarias/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/84801EC2-D45F-41ED-97CA-E1F63EF8B60E/PocTrains.app/www/app/index.html
+2014-02-17 17:01:42.419 PocTrains[16721:a0b] *** Assertion failure in -[UIApplication runModal:](), /SourceCache/UIKit_Sim/UIKit-2903.23/UIApplication.m:9465
+2014-02-17 17:01:42.435 PocTrains[16721:a0b] *** WebKit discarded an uncaught exception in the webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame: delegate: <NSInternalInconsistencyException> The view passed in does not have a window.
+2014-02-17 17:11:26.619 PocTrains[18189:a0b] Multi-tasking -> Device: YES, App: YES
+2014-02-17 17:11:26.629 PocTrains[18189:a0b] Unlimited access to network resources
+2014-02-17 17:11:26.825 PocTrains[18189:a0b] Resetting plugins due to page load.
+2014-02-17 17:12:02.256 PocTrains[18189:4003] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2014-02-17 17:12:19.831 PocTrains[18846:a0b] Multi-tasking -> Device: YES, App: YES
+2014-02-17 17:12:19.842 PocTrains[18846:a0b] Unlimited access to network resources
+2014-02-17 17:12:19.973 PocTrains[18846:a0b] Resetting plugins due to page load.
+2014-02-17 17:12:46.536 PocTrains[18846:3e03] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2014-02-17 17:14:12.995 PocTrains[19549:a0b] Multi-tasking -> Device: YES, App: YES
+2014-02-17 17:14:13.010 PocTrains[19549:a0b] Unlimited access to network resources
+2014-02-17 17:14:13.168 PocTrains[19549:a0b] Resetting plugins due to page load.
+2014-02-17 17:14:36.983 PocTrains[19549:3e03] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2014-02-17 17:15:08.257 PocTrains[19590:a0b] Multi-tasking -> Device: YES, App: YES
+2014-02-17 17:15:08.263 PocTrains[19590:a0b] Unlimited access to network resources
+2014-02-17 17:15:08.310 PocTrains[19590:a0b] Resetting plugins due to page load.
+2014-02-17 17:15:30.246 PocTrains[19590:3d03] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2014-02-17 17:15:30.262 PocTrains[19590:a0b] Finished load of: file:///Users/jarias/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/84801EC2-D45F-41ED-97CA-E1F63EF8B60E/PocTrains.app/www/app/index.html
+2014-02-17 17:29:28.052 PocTrains[20755:a0b] Multi-tasking -> Device: YES, App: YES
+2014-02-17 17:29:28.060 PocTrains[20755:a0b] Unlimited access to network resources
+2014-02-17 17:29:28.201 PocTrains[20755:a0b] Resetting plugins due to page load.
+2014-02-17 17:29:28.344 PocTrains[20755:a0b] Finished load of: file:///Users/jarias/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/84801EC2-D45F-41ED-97CA-E1F63EF8B60E/PocTrains.app/www/app/index.html
+2014-02-17 17:30:49.230 PocTrains[21435:a0b] Multi-tasking -> Device: YES, App: YES
+2014-02-17 17:30:49.242 PocTrains[21435:a0b] Unlimited access to network resources
+2014-02-17 17:30:49.358 PocTrains[21435:a0b] Resetting plugins due to page load.
+2014-02-17 17:30:49.423 PocTrains[21435:a0b] Finished load of: file:///Users/jarias/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/84801EC2-D45F-41ED-97CA-E1F63EF8B60E/PocTrains.app/www/app/index.html
+2014-02-17 17:31:23.420 PocTrains[22079:a0b] Multi-tasking -> Device: YES, App: YES
+2014-02-17 17:31:23.437 PocTrains[22079:a0b] Unlimited access to network resources
+2014-02-17 17:31:23.597 PocTrains[22079:a0b] Resetting plugins due to page load.
+2014-02-17 17:31:23.654 PocTrains[22079:a0b] Finished load of: file:///Users/jarias/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/84801EC2-D45F-41ED-97CA-E1F63EF8B60E/PocTrains.app/www/app/index.html

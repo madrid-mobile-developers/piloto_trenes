@@ -30,6 +30,16 @@ define('views/StationsList',
                         container.html(_.template(tpl, {data: spliceFunction(model)['Stations']}));
                         //Hide loading
                         $.mobile.hidePageLoadingMsg();
+
+                        navigator.geolocation.getCurrentPosition(
+                            function(position){
+                                console.log("Lat: "+position.coords.latitude + " Long: "+position.coords.longitude);
+                            },
+                            function(error){
+                                console.log('code: '    + error.code    + '\n' +
+                                    'message: ' + error.message + '\n');
+                            });
+
                         deferred.resolve();
                     },
                     error : function(collection, response){
