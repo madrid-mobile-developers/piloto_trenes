@@ -6,7 +6,7 @@ define([
     'jquery'
 ],
     function (Backbone, $) {
-        describe('Test for server trace functionality', function () {
+        xdescribe('Test for server trace functionality', function () {
 
 
             var Model = Backbone.Model.extend({
