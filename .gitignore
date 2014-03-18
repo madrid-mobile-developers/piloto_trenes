@@ -1,4 +1,8 @@
 
+webapp/node_modules
+
+
+
 # Android ignores
 # built application files
 *.apk
@@ -52,8 +56,11 @@
 
 #CocoaPods
 *-ios/Pods
+bootstrap-ios/Train.xcodeproj/project.xcworkspace/xcuserdata
+bootstrap-android/assets/www
+bootstrap-ios/www
 output.log
-
+webapp/temp_lib
 webapp/test/coverage
 webapp/public/**
 local.properties
